@@ -26,3 +26,8 @@ services:
     image: shahcompbio/spectrum-scrna-react
     ports:
       - "80:80"
+volumes:
+  esdata01:
+    driver: local
+    driver_opts:
+      device: /dev/sdb1
