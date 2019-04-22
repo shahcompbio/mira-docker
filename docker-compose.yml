@@ -13,7 +13,7 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - /mnt/resource:/usr/share/elasticsearch/data
+      - esdata01:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
   graphql:
@@ -30,4 +30,4 @@ volumes:
   esdata01:
     driver: local
     driver_opts:
-      device: /dev/sdb1
+      device: /dev/sdc1
