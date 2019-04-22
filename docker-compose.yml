@@ -13,7 +13,7 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - /dev/sdb1:/usr/share/elasticsearch/data
+      - /mnt/resource:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
   graphql:
