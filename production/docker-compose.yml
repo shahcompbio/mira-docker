@@ -1,0 +1,11 @@
+version: "3"
+services:
+  graphql:
+    container_name: graphql
+    image: shahcompbio/spectrum-scrna-graphql
+    network_mode: "host"
+  frontend:
+    container_name: frontend
+    image: shahcompbio/spectrum-scrna-react
+    ports:
+      - "80:80"
