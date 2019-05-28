@@ -9,3 +9,5 @@ services:
     image: shahcompbio/spectrum-scrna-react
     ports:
       - "80:80"
+    depends_on:
+      - graphql
