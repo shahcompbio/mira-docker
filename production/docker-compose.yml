@@ -10,6 +10,7 @@ services:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - cluster.search.max_buckets=50000
     ulimits:
       memlock:
         soft: -1
@@ -28,6 +29,7 @@ services:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - cluster.search.max_buckets=50000
     ulimits:
       memlock:
         soft: -1
@@ -44,6 +46,7 @@ services:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - cluster.search.max_buckets=50000
     ulimits:
       memlock:
         soft: -1
