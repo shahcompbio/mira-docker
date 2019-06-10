@@ -55,7 +55,7 @@ services:
       - /mnt/n03:/usr/share/elasticsearch/data
   graphql:
     container_name: graphql
-    image: shahcompbio/spectrum-scrna-graphql
+    image: shahcompbio/mira-graphql
     environment:
       - HOST=es01
     depends_on:
@@ -64,7 +64,7 @@ services:
       - es03
   frontend:
     container_name: frontend
-    image: shahcompbio/spectrum-scrna-react
+    image: shahcompbio/mira-react
     ports:
       - "80:80"
     depends_on:
