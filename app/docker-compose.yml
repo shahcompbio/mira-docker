@@ -9,6 +9,6 @@ services:
     container_name: frontend
     image: shahcompbio/mira-react:staging
     ports:
-      - "80:80"
+      - "5010:80"
     depends_on:
       - graphql
