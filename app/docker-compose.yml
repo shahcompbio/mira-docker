@@ -1,14 +1,14 @@
 version: "3"
 services:
   graphql:
-    container_name: graphql
+    container_name: mira-graphql
     image: shahcompbio/mira-graphql:staging
     environment:
       - HOST=http://40.87.0.178/mira/db
   frontend:
-    container_name: frontend
+    container_name: mira-frontend
     image: shahcompbio/mira-react:staging
     ports:
       - "5010:80"
     depends_on:
-      - graphql
+      - mira-graphql
