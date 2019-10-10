@@ -9,7 +9,7 @@ services:
       - cluster.initial_master_nodes=es01,es02,es03
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - search.max_buckets=50000
     ulimits:
       memlock:
@@ -28,7 +28,7 @@ services:
       - cluster.initial_master_nodes=es01,es02,es03
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - search.max_buckets=50000
     ulimits:
       memlock:
@@ -45,7 +45,7 @@ services:
       - cluster.initial_master_nodes=es01,es02,es03
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - search.max_buckets=50000
     ulimits:
       memlock:
