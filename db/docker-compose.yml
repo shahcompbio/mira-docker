@@ -18,7 +18,7 @@ services:
         hard: -1
     volumes:
       - /n01:/usr/share/elasticsearch/data
-      - /mnt/elasticsearch:/usr/share/elasticsearch/backup
+      - /backup/elasticsearch:/usr/share/elasticsearch/backup
     ports:
       - 9200:9200
   es02:
@@ -39,7 +39,7 @@ services:
         hard: -1
     volumes:
       - /n02:/usr/share/elasticsearch/data
-      - /mnt/elasticsearch:/usr/share/elasticsearch/backup
+      - /backup/elasticsearch:/usr/share/elasticsearch/backup
   es03:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.3.1
     container_name: es03
@@ -58,4 +58,4 @@ services:
         hard: -1
     volumes:
       - /n03:/usr/share/elasticsearch/data
-      - /mnt/elasticsearch:/usr/share/elasticsearch/backup
+      - /backup/elasticsearch:/usr/share/elasticsearch/backup
