@@ -1,7 +1,7 @@
 version: "3"
 services:
   es01:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.3.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.3.1
     container_name: es01
     environment:
       - node.name=es01
@@ -11,18 +11,18 @@ services:
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - search.max_buckets=50000
-      - "path.repo=/opt/elasticsearch/backup"
+      - "path.repo=/usr/share/elasticsearch/backup"
     ulimits:
       memlock:
         soft: -1
         hard: -1
     volumes:
       - /n01:/usr/share/elasticsearch/data
-      - /opt/elasticsearch/backup:/opt/elasticsearch/backup
+      - /mnt/elasticsearch:/usr/share/elasticsearch/backup
     ports:
       - 9200:9200
   es02:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.3.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.3.1
     container_name: es02
     environment:
       - node.name=es02
@@ -32,15 +32,16 @@ services:
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - search.max_buckets=50000
-      - "path.repo=/opt/elasticsearch/backup"
+      - "path.repo=/usr/share/elasticsearch/backup"
     ulimits:
       memlock:
         soft: -1
         hard: -1
     volumes:
       - /n02:/usr/share/elasticsearch/data
+      - /mnt/elasticsearch:/usr/share/elasticsearch/backup
   es03:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.3.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.3.1
     container_name: es03
     environment:
       - node.name=es03
@@ -50,10 +51,11 @@ services:
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - search.max_buckets=50000
-      - "path.repo=/opt/elasticsearch/backup"
+      - "path.repo=/usr/share/elasticsearch/backup"
     ulimits:
       memlock:
         soft: -1
         hard: -1
     volumes:
       - /n03:/usr/share/elasticsearch/data
+      - /mnt/elasticsearch:/usr/share/elasticsearch/backup
