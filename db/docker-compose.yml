@@ -11,6 +11,7 @@ services:
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - search.max_buckets=50000
+      - http.max_content_length=500mb
       - "path.repo=/usr/share/elasticsearch/backup"
     ulimits:
       memlock:
@@ -32,6 +33,7 @@ services:
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - search.max_buckets=50000
+      - http.max_content_length=500mb
       - "path.repo=/usr/share/elasticsearch/backup"
     ulimits:
       memlock:
@@ -51,6 +53,7 @@ services:
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
       - search.max_buckets=50000
+      - http.max_content_length=500mb
       - "path.repo=/usr/share/elasticsearch/backup"
     ulimits:
       memlock:
