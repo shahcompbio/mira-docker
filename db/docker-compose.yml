@@ -1,7 +1,7 @@
 version: "3"
 services:
   es01:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.3.1
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
     container_name: es01
     environment:
       - node.name=es01
@@ -23,7 +23,7 @@ services:
     ports:
       - 9200:9200
   es02:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.3.1
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
     container_name: es02
     environment:
       - node.name=es02
@@ -43,7 +43,7 @@ services:
       - /n02:/usr/share/elasticsearch/data
       - /backup/elasticsearch:/usr/share/elasticsearch/backup
   es03:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.3.1
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
     container_name: es03
     environment:
       - node.name=es03
